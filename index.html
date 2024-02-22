@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BSA Calculator</title>
+    <style>
+        .result-box {
+            background-color: lightblue;
+            padding: 10px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .input-label {
+            font-size: 24px;
+        }
+
+        .calculate-button {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>BSA Calculator</h1>
+    <label for="system" class="input-label">System:</label>
+    <select id="system" style="font-size: 24px;" onchange="updateUnits()">
+        <option value="metric">Metric</option>
+        <option value="imperial">Imperial</option>
+    </select><br><br>
+    <label for="weight" class="input-label">Weight:</label>
+    <input type="number" id="weight" style="font-size: 24px;" required><span id="weight-unit" style="font-size: 24px;"></span><br><br>
+    <label for="height" class="input-label">Height:</label>
+    <input type="number" id="height" style="font-size: 24px;" required><span id="height-unit" style="font-size: 24px;"></span><br><br>
+    <button onclick="calculateBSA()" class="calculate-button">Calculate</button><br><br>
+    <div id="result" class="result-box"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
